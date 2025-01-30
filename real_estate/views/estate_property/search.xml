@@ -1,0 +1,22 @@
+<odoo>
+    <record id="estate_property_search" model="ir.ui.view">
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Search for properties">
+                <field name="name"/>
+                <field name="property_type_id"/>
+                <field name="postcode"/>
+                <field name="expected_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <filter string="Strasbourg Area" name="strasbourg" domain="['|', ('postcode', '=', '67000'), ('postcode', '=', '67100')]"/>
+                <filter string="Available properties" name="available" domain="['|', ('state', '=', 'new'), ('state', '=', 'offer_received')]"/>
+                <group expand="1">
+                    <filter string="Postcode" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

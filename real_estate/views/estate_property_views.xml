@@ -1,0 +1,94 @@
+<!-- <odoo>
+
+    <record id="estate_property_action" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="estate_property_view_tree" model="ir.ui.view">
+        <field name="name">estate.property.list</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <list string="WOWOW list!">
+                <field name="name"/>
+                <field name="property_type_id"/>
+                <field name="postcode"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="expected_price"/>
+                <field name="selling_price"/>
+                <field name="date_availability"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="estate_property_view_form" model="ir.ui.view">
+        <field name="name">estate.property.form</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form string="Form for a new house">
+                <sheet>
+                    <group style="display:flex; flex-direction: column;">
+                        <group>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </group>
+                        <group style="display:grid; grid-template-columns: repeat(4, 1fr); grid-gap: 0;">
+                            <field name="state"/>
+                            <field name="property_type_id"/>
+                            <field name="postcode"/>
+                            <field name="expected_price"/>
+                            <field name="date_availability"/>
+                            <field name="selling_price"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="description" />
+                                <field name="bedrooms"/>
+                                <field name="living_area"/>
+                                <field name="facades"/>
+                                <field name="garage"/>
+                                <field name="garden"/>
+                                <field name="garden_area"/>
+                                <field name="garden_orientation"/>
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <field name="seller_id"/>
+                                <field name="buyer_id"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="estate_property_search" model="ir.ui.view">
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Search for properties">
+                <field name="name"/>
+                <field name="property_type_id"/>
+                <field name="postcode"/>
+                <field name="expected_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area"/>
+                <field name="facades"/>
+                <filter string="Strasbourg Area" name="strasbourg" domain="['|', ('postcode', '=', '67000'), ('postcode', '=', '67100')]"/>
+                <filter string="Available properties" name="available" domain="['|', ('state', '=', 'new'), ('state', '=', 'offer_received')]"/>
+                <group expand="1">
+                    <filter string="Postcode" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo> -->
